@@ -1,0 +1,29 @@
+import React from 'react'
+import {Link} from 'react-router-dom'
+import '../styles/ProductListPage.css'
+
+
+const products = ['car', 'bike', 'motorcicle']
+
+const ProductListPage = () => {
+
+    const list = products.map(product => (
+        <li key={product}>
+            <Link to={`/product/${product}`} >{product}</Link>
+        </li>
+    ))
+
+
+ 
+
+    return(
+        <div className="product">
+       <h2>Products list:</h2>
+       <ul>
+           {list}
+       </ul>
+        </div>
+    )
+}
+
+export default ProductListPage
